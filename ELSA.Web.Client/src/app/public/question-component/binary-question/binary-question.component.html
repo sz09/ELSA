@@ -1,0 +1,16 @@
+<div class="row col-md-4">
+    <div class="form-check col-md-6">
+        <label class="form-check-label" for="{{question.id}}-true">
+            <input class="form-check-input" type="radio" name="{{question.id}}" id="{{question.id}}-true"
+                [(ngModel)]="answer" [value]="true">
+                {{ "Question.Binary_Value_True" | translate}}
+        </label>
+    </div>
+    <div class="form-check  col-md-6">
+        <label class="form-check-label" for="{{question.id}}-false">
+            <input class="form-check-input" type="radio" name="{{question.id}}" id="{{question.id}}-false"
+                [(ngModel)]="answer" [value]="false">
+                {{ "Question.Binary_Value_False" | translate}}
+        </label>
+    </div>
+</div>

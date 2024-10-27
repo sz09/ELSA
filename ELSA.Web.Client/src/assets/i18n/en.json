@@ -1,0 +1,114 @@
+{
+    "Application": {
+        "Name": "ELSA"
+    },
+    "Layout": {
+        "Home_Link": "Home",
+        "About_Us_Link": "About Us",
+        "Teams_Link": "Teams",
+        "Services_Link": "Services",
+        "Quiz_Link": "Quiz",
+        "Contact_Link": "Contact",
+        "Customer_Service_Link": "Customer Service",
+        "Privacy_Policy_Link": "Privacy Policy",
+        "Sign_In_Link": "Sign In",
+        "My_Wishlist_Link": "My Wishlist",
+        "Subscribe_Button": "Subscribe!",
+        "Newsletter": "Newsletter",
+        "Help_Link": "Help",
+        "Home_Welcome": "Welcome"
+    },
+    "Quiz": {
+        "TakeQuizNow": "Take quiz now",
+        "Take_Challenge_By_Answer_Questions_Below": "Take Challenge By Answer Questions Below",
+        "Questions": "Questions"
+    },
+    "LeaderBoard": {
+        "Header_Title": "Leader board",
+        "Nickname": "Nickname",
+        "Points": "Points"
+    },
+    "TakeQuiz": {
+        "Previous": "Previous",
+        "Next": "Next",
+        "Submit": "Submit",
+        "Correct_Answer": "Correct",
+        "Incorrect_Answer": "Incorrect",
+        "Return_Quizzes_Page": "Return quizzes page",
+        "PleaseGiveAnAnswer": "Please give an answer!"
+    },
+    "Question": {
+        "Binary_Value_True": "True",
+        "Binary_Value_False": "False",
+        "Binary_IgnoreCaseAnswer_Label":"Ignore case answer",
+        "Binary_AnyAnswer_Label": "Any answer provided"
+    },
+    "HomePage": {
+        "Welcome_To_English_Quiz": "Welcome to English Quiz",
+        "Start_Now": "Start now"
+    },
+    "Commons": {
+        "LoadMore": "Load more",
+        "Buttons": {
+            "Create": "Create",
+            "Update": "Update",
+            "Delete": "Delete",
+            "Save": "Save",
+            "Remove": "Remove"
+        },
+        "Messages": {
+            "Success": "Success"
+        }
+    },
+    "StartPage": {
+        "Label_Nickname": "Nickname",
+        "Label_Email": "Email",
+        "Button_Go": "Go",
+        "Label_SignIn": "Login as anonymous"
+    },
+    "Login": {
+        "Label_SignIn": "Sign in",
+        "Label_Username": "Username",
+        "Label_Password": "Password",
+        "Label_KeepMeLogin": "Save login",
+        "Button_Login": "Login"
+    },
+    "Admin": {
+        "Logout": "Logout",
+        "Quiz_Menu": "Quiz",
+        "Quiz": {
+            "Subjetct": "Quiz Subjetct",
+            "Subject_Label": "Quiz Subject",
+            "Question_Label": "Question",
+            "Questions_Label": "Questions",
+            "Subject_Placeholder":"Enter subject",
+            "Question_Placeholder":"Enter question"
+        },
+        "Question":{
+            "AddNewQuestion_Button": "Add new question",
+            "Points_Label": "Points",
+            "AddNewOption_Button": "New option",
+            "Points_Placeholder": "Enter points",
+            "QuestionType_Label":"Question Type",
+            "QuestionType_Placeholder":"Endter question type",
+            "PleaseProvideValidOptions_Error": "Please provide valid options",
+            "CorrectErrorsFirstToContinue": "Correct errors first before continue!"
+        },
+        "QuestionType.Binary" : "Binary",
+        "QuestionType.Essay": "Essay",
+        "QuestionType.SingleChoice": "Single choice",
+        "QuestionType.MultiChoice": "Multiple choices",
+        "QuestionType.ImageSingleChoice": "Single image choice",
+        "QuestionType.ImageMultiChoice": "Multiple images choice"
+    },
+    "Alerts": {
+        "AreYouSureTo": "Are you sure to delete {{action}} ?",
+        "Yes": "Yes",
+        "No": "No",
+        "Delete_This_Item": "Delete this item"
+    },
+    "Auth": {
+        "Common_Error": "Error",
+        "Common_Error_InternalServerError": "Internal Server Error! Please try again or contact admin"
+    }
+}

@@ -1,0 +1,7 @@
+<div>
+    {{"Alerts.AreYouSureTo" | translate: {action: ( ref.data.titleKey | translate | lowercase)} }}
+    <div class="button-group pull-right">
+      <button type="submit" class="btn btn-sm btn-danger m-2" (click)="ref.close(true)">{{ 'Alerts.Yes' | translate }}</button>
+      <button type="submit" class="btn btn-sm btn-primary m-2" (click)="ref.close(false)">{{ 'Alerts.No' | translate }}</button>
+  </div>
+</div>

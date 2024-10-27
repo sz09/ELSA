@@ -1,0 +1,24 @@
+.question-states {
+    height: 1rem;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.question-state {
+    display: inline-block;
+    height: 1rem;
+    position: relative;
+    top: -3px;
+}
+.question-state:not(:last-child){
+    border-right: 1px solid black;
+}
+
+.question-state:first-child {
+    border-top-left-radius: var(--bs-border-radius) !important;
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+}
+
+.question-state:last-child {
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+}

@@ -1,0 +1,12 @@
+input[type=checkbox] {
+    display: none;
+}
+
+[type=checkbox]+img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=checkbox]:checked+img {
+    outline: 4px solid rgb(25, 135, 84);
+}

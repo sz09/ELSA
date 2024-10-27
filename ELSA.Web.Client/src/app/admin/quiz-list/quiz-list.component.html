@@ -1,0 +1,27 @@
+<div class="p-3">
+    <div class="row mb-3 d-inline-block">
+        <a routerLink="/admin/quiz/create" class="btn btn-outline-dark w-f-content"> {{ 'Commons.Buttons.Create' | translate }}</a>
+    </div>
+    <div class="table-boundary row border border-dark rounded">
+        <table class="table mt-2">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">{{ 'Admin.Quiz.Subjetct' | translate}}</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of quizzes; let i = index">
+                    <th scope="row" class="col-md-1">{{ getPage(i) + 1}}</th>
+                    <td class="col-md-9">{{ item.subject }}</td>
+                    <td  class="col-md-2">
+                        <a  routerLink="/admin/quiz/{{item.id}}" class="btn btn-sm btn-primary mx-2"> {{ "Commons.Buttons.Update" | translate}}</a>
+                        <button class="btn btn-sm btn-danger" (click)="onDelete(item.id, item.subject)"> {{ "Commons.Buttons.Delete" | translate}}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <pagination [pageSize]="payload.PageSize" [total]="total" [selectedPage]="payload.Page" (onPageChange)="onPageChange($event)"></pagination>
+    </div>
+</div>

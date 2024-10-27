@@ -1,0 +1,8 @@
+<div class="quiz-container border rounded border-dark p-2">
+    <span class="quiz-title"> {{ quiz.subject }}</span>
+    <p>
+        <small><i> {{ quiz.questionIds?.length ?? 0 }} {{'Quiz.Questions' | translate}}</i></small>
+    </p>
+    <a class="btn btn-sm btn-primary btn-take-quiz" routerLink="/quiz/{{quiz.id}}"> {{ 'Quiz.TakeQuizNow' |
+        translate}}</a>
+</div>

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <div class="container header">
+        <header class="site-navbar js-sticky-header site-navbar-target d-xl-block" role="banner">
+            <div class="row align-items-center">
+                <div class="col-6 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a routerLink="/">{{ 'Application.Name' | translate}}</a></h1>
+                </div>
+                <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+
+                        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                            <li><a routerLink="/" class="nav-link">{{ "Layout.Home_Link" | translate }}</a></li>
+                            <li class="has-children">
+                                <a routerLink="/about-us" class="nav-link">{{ "Layout.About_Us_Link" | translate }}</a>
+                                <ul class="dropdown">
+                                    <li><a routerLink="/teams" class="nav-link">{{"Layout.Teams_Link" | translate}}</a></li>
+                                    <li><a routerLink="/services" class="nav-link">{{"Layout.Services_Link" | translate}}</a></li>
+                                </ul>
+                            </li>
+                            <li><a routerLink="/quizzes"  class="nav-link">{{ "Layout.Quiz_Link" | translate }}</a></li>
+                            <li><a routerLink="/contact" class="nav-link">{{"Layout.Contact_Link" | translate}}</a></li>
+                            <li *ngIf="username" class="float-end">
+                                <a routerLink="/me" class="nav-link">{{ "Layout.Home_Welcome" | translate }} {{username}}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+                <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
+                        href="#" class="site-menu-toggle js-menu-toggle float-right"><span
+                            class="icon-menu h3"></span></a></div>
+
+            </div>
+        </header>
+    </div>
+    <div class="container body">
+        <div class="row">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+
+        <!-- Footer Links -->
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 footer-info-item">
+                        <h3>Information</h3>
+                        <ul class="list-unstyled">
+                            <li><a routerLink="/about-us">{{ "Layout.About_Us_Link" | translate }}</a></li>
+                            <li><a routerLink="/customer-services">{{"Layout.Customer_Service_Link" | translate}}</a></li>
+                            <li><a routerLink="/privacy">{{"Layout.Privacy_Policy_Link" | translate}}</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 footer-info-item">
+                        <h3>My Account</h3>
+                        <ul class="list-unstyled">
+                            <li><a routerLink="/login">{{"Layout.Sign_In_Link" | translate}}</a></li>
+                            <li><a routerLink="/my-wishlist">{{"Layout.My_Wishlist_Link" | translate}}</a></li>
+                            <li><a routerLink="/help">{{"Layout.Help_Link" | translate}}</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 footer-info-item">
+                        <h3><span class="glyphicon glyphicon-list-alt"></span> {{"Layout.Newsletter" | translate}}</h3>
+                        <p>Sign up for exclusive offers.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">
+                                    {{"Layout.Subscribe_Button" | translate}}
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div>
+    </footer>
+</div>

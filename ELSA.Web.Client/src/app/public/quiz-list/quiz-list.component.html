@@ -1,0 +1,10 @@
+<div class="quiz-list" *ngIf="quizRows && quizRows.length">
+    <div class="row pb-3" *ngFor="let row of quizRows">
+        <div class="col-md-3" *ngFor="let item of row">
+            <quiz [quiz]="item"></quiz>
+        </div>
+    </div>
+    <div class="row" *ngIf="quizzes.length < total">
+        <button class="btn btn-sm btn-outline-dark w-f-content m-auto" (click)="loadMore()"> {{ 'Commons.LoadMore' | translate }}</button>
+    </div>
+</div>

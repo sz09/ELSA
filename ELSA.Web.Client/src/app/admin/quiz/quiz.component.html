@@ -1,0 +1,79 @@
+<form #f="ngForm" novalidate (ngSubmit)="saveAll()">
+    <div class="container">
+        <div class="row">
+            <div class="buttons d-inline-block">
+                <button type="submit" class="btn btn-success float-end"> {{ 'Commons.Buttons.Save' | translate
+                    }}</button>
+                <button type="button" class="btn btn-outline-dark float-end mx-2" (click)="addNewQuestion()"> {{
+                    'Admin.Question.AddNewQuestion_Button' | translate }} </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group pb-2">
+                <label for="subject"><b>{{'Admin.Quiz.Subject_Label' | translate}}</b></label>
+                <input type="text" class="form-control" [(ngModel)]="quiz.subject" id="subject" required
+                    aria-describedby="subject" placeholder="{{'Admin.Quiz.Subject_Placeholder' | translate}}"
+                    [ngModelOptions]="{standalone: true}" />
+            </div>
+        </div>
+        <label *ngIf="questions && questions.length" class="mt-2"> <b> {{ 'Admin.Quiz.Questions_Label' | translate
+                }}</b></label>
+        <div class="question-item border-top rounded" *ngFor="let question of questions; let i = index" id="question-boundary-{{question.id}}">
+            <div class="row">
+                <b class="d-inline-block col-md-1">#{{i + 1}}</b>
+                <div class="buttons col-md-11">
+                    <button type="button" class="btn btn-sm btn-danger float-end mx-2" (click)="removeQuestionAt(i)">
+                        {{'Commons.Buttons.Remove' | translate}}</button>
+                    <button type="button" *ngIf="!isCreateNew" class="btn btn-sm btn-success float-end"
+                        (click)="saveQuestionByIndex(i)"> {{'Commons.Buttons.Save' | translate}}</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="{{question.id}}-question-{{i}}"><b>{{'Admin.Quiz.Question_Label' |
+                            translate}}</b></label>
+                    <input type="text" class="form-control" [(ngModel)]="question.question"
+                        id="{{question.id}}-question-{{i}}"
+                        placeholder="{{'Admin.Quiz.Question_Placeholder' | translate}}"
+                        [ngModelOptions]="{standalone: true}" />
+                </div>
+                <div class="col-md-12 row">
+                    <div class="col-md-8">
+                        <label for="{{question.id}}-question-type-{{i}}"> {{'Admin.Question.QuestionType_Label' |
+                            translate}}</label>
+                        <ng-select [items]="questionTypes" bindLabel="label" bindValue="id"
+                            [disabled]="!question.isNewQuestion" clearable="{{question.type == null}}"
+                            [ngModelOptions]="{standalone: true}" [ngModel]="question.type"
+                            (ngModelChange)="onChangeQuestionType(i, $event)">
+                        </ng-select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="{{question.id}}-points-{{i}}"> {{'Admin.Question.Points_Label' | translate}}</label>
+                        <input type="number" class="form-control" [(ngModel)]="question.points"
+                            id="{{question.id}}-points-{{i}}" min="0" step="0.5"
+                            placeholder="{{'Admin.Question.Points_Placeholder' | translate}}"
+                            [ngModelOptions]="{standalone: true}" />
+                    </div>
+                </div>
+            </div>
+            <essay-question #questionComponent *ngIf="isEssayQuestion(question)" [question]="question"
+                [correctAnswer]="question.correctAnswer"></essay-question>
+            <single-choice-question #questionComponent *ngIf="isSingleChoiceQuestion(question)" [question]="question"
+                [correctAnswer]="question.correctAnswer"
+               ></single-choice-question>
+            <multi-choice-question #questionComponent *ngIf="isMultiChoiceQuestion(question)" [question]="question"
+                [correctAnswer]="question.correctAnswers"
+               ></multi-choice-question>
+            <image-single-choice-question #questionComponent *ngIf="isImageSingleChoiceQuestion(question)"
+                [correctAnswer]="question.correctAnswer" [question]="question"
+               ></image-single-choice-question>
+            <image-multi-choice-question #questionComponent *ngIf="isImageMultiChoiceQuestion(question)"
+                [correctAnswer]="question.correctAnswers" [question]="question"
+               
+                [correctAnswer]="question.correctAnswers"></image-multi-choice-question>
+            <binary-question #questionComponent *ngIf="isBinaryQuestion(question)" [question]="question"
+                [correctAnswer]="question.correctAnswer"
+               ></binary-question>
+        </div>
+    </div>
+</form>

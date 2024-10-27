@@ -1,0 +1,16 @@
+<div class="row" *ngIf="questionStates && questionStates.length">
+    <div class="col-md-9 d-inline-block question-states">
+
+        @for (item of questionStates; track $index) {
+            <span *ngIf="item.state !== answerState.NotAnswered" class="question-state" [ngStyle]="{'width': withPercent + '%' }" 
+                [ngClass]="{ 
+                    'bg-danger': item.state === answerState.Incorrect,
+                    'bg-success': item.state === answerState.Correct
+                }"
+            >
+            </span>
+            <span *ngIf="item.state === answerState.NotAnswered" class="question-state bg-warning" [ngStyle]="{'width': withPercent + '%' }" (click)="reelectQuestionEmitter.emit($index)" ></span>
+        }
+    </div>
+   <span class="d-inline-block col-md-3"> {{completed}} / {{total}} ({{ completed / total * 100}}%)</span>
+</div>

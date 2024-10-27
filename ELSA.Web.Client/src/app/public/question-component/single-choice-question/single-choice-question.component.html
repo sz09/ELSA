@@ -1,0 +1,12 @@
+<div *ngFor="let batch of batchOptions; let iBatch = index" class="row">
+    @for (option of batch; track $index) {
+        @let calculatedIndex = calculateIndex(iBatch, $index);
+        <div class="row" class="form-check">
+            <input class="form-check-input" type="radio" name="{{question.id}}" id="{{question.id}}-{{calculatedIndex}}"
+            (ngModelChange)="answer = calculatedIndex" [checked]="answer == calculatedIndex">
+            <label class="form-check-label" for="{{question.id}}-{{calculatedIndex}}">
+                {{ option }}
+            </label>
+        </div>
+    }
+</div>

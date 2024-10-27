@@ -1,0 +1,18 @@
+<input class="form-control" [(ngModel)]="correctAnswer" required [disabled]="question.anyAnswer">
+<label *ngIf="errorMessage" class="error-message"><i>{{errorMessage}}</i></label>
+<div class="row col-md-12">
+    <div class="form-check col-md-6">
+        <label class="form-check-label" for="{{question.id}}-ignoreCase">
+            <input class="form-check-input" type="checkbox" name="{{question.id}}-ignoreCase" [disabled]="question.anyAnswer"
+                id="{{question.id}}-ignoreCase" [(ngModel)]="question.ignoreCase" >
+            {{ "Question.Binary_IgnoreCaseAnswer_Label" | translate}}
+        </label>
+    </div>
+    <div class="form-check col-md-6">
+        <label class="form-check-label" for="{{question.id}}-anyAnswer">
+            <input class="form-check-input" type="checkbox" name="{{question.id}}-anyAnswer"
+                id="{{question.id}}-anyAnswer" [(ngModel)]="question.anyAnswer">
+            {{ "Question.Binary_AnyAnswer_Label" | translate}}
+        </label>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row col-md-12">
+    <div class="take-quiz-container border rounded border-dark col-md-8 d-inline-block">
+        <h5 class="take-quiz-title">{{ "Quiz.Take_Challenge_By_Answer_Questions_Below" | translate }}</h5>
+        <div  *ngIf="questions && questions.length">
+            <div class="row container">
+                <progression class="col-md-10" (reelectQuestionEmitter)="showQuestion = $event" [questionStates]="questionStates" [total]="questions.length"></progression>
+                <score class="col-md-2 float-end" [totalScore]="totalScore" [scoredPoints]="scoredPoints"></score>
+            </div>
+            @if(displayQuestion) {
+                <h4 class="question p-b-2" *ngIf="showQuestion < questions.length"> {{ displayQuestion }}</h4>
+                <div *ngFor="let question of questions; let i = index" class="question-container mb-3">
+                    <essay-question #questionComponent *ngIf="isDisplayQuestion(i) && isEssayQuestion(question)" [question]="question" [answer]="existingAnswers[i]" (onCollectedEmitter)="answerQuestion($event)"></essay-question>
+                    <single-choice-question #questionComponent *ngIf="isDisplayQuestion(i) && isSingleChoiceQuestion(question)" [question]="question" [answer]="existingAnswers[i]" (onCollectedEmitter)="answerQuestion($event)"></single-choice-question>
+                    <multi-choice-question #questionComponent *ngIf="isDisplayQuestion(i) && isMultiChoiceQuestion(question)" [question]="question" [answer]="existingAnswers[i]" (onCollectedEmitter)="answerQuestion($event)"></multi-choice-question>
+                    <image-single-choice-question #questionComponent *ngIf="isDisplayQuestion(i) && isImageSingleChoiceQuestion(question)" [question]="question" [answer]="existingAnswers[i]" (onCollectedEmitter)="answerQuestion($event)"></image-single-choice-question>
+                    <image-multi-choice-question #questionComponent *ngIf="isDisplayQuestion(i) && isImageMultiChoiceQuestion(question)"  [question]="question" [answer]="existingAnswers[i]" (onCollectedEmitter)="answerQuestion($event)"></image-multi-choice-question>
+                    <binary-question #questionComponent *ngIf="isDisplayQuestion(i) && isBinaryQuestion(question)" [question]="question" [answer]="existingAnswers[i]" (onCollectedEmitter)="answerQuestion($event)"></binary-question>
+                </div>
+                <div class="buttons">
+                    <div class="col-md-4 float-end">   
+                        <button [disabled]="!canPrevious" class="btn btn-outline-dark" (click)="previous()">{{ 'TakeQuiz.Previous' | translate }}</button>
+                        <button [disabled]="!canAnswer" class="btn btn-primary" (click)="submit()">{{ 'TakeQuiz.Submit' | translate}}</button>
+                        <button [disabled]="!canNext" class="btn btn-outline-dark" (click)="next()">{{ 'TakeQuiz.Next' | translate }}</button>
+                    </div>
+                </div>
+            }
+            @else {
+                <div class="mt-5 row">
+                    <a routerLink="/quizzes" class="m-auto w-f-content btn btn-success"> {{ "TakeQuiz.Return_Quizzes_Page" | translate}}</a>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-4 d-inline-block">
+        <leader-board></leader-board>
+    </div>
+</div>

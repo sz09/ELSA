@@ -1,0 +1,13 @@
+<div class="pagination-panel m-auto">
+  <ul class="pagination">
+    <li *ngFor="let pageNumber of posiblePages" class="page-item"
+        [ngClass]="{'active': pageNumber == selectedPage, 'middle': pageNumber === -1 }">
+      <button type="button" class="page-link btn btn-sm border" [disabled]="pageNumber === -1"
+              (click)="goToPage(pageNumber)">
+        <span *ngIf="pageNumber !== -1" aria-hidden="true">{{pageNumber}}</span><span class="sr-only">{{pageNumber}}</span>
+        <span *ngIf="pageNumber === -1" aria-hidden="true">...</span>
+      </button>
+    </li>
+  </ul>
+  <input type="text" class="d-none" id="hidden-paging" name="page">
+</div>

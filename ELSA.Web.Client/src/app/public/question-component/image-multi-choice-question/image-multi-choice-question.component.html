@@ -1,0 +1,15 @@
+<div class="row image-multi-choice-question-container">
+    <div class="row" *ngFor="let batch of batchOptions; let iBatch = index">
+        @for (item of batch; track $index) {
+        @let calculatedIndex = calculateIndex(iBatch, $index);
+        <div class="d-inline-block col-md-6 p-2">
+            <label class="form-check-label" for="{{question.id}}-{{calculatedIndex}}">
+                <input lass="form-check-input" type="checkbox" [name]="question.id"
+                    id="{{question.id}}-{{calculatedIndex}}" checked [value]="calculatedIndex" [ngModel]="tempModels[calculatedIndex]"
+                    (ngModelChange)="select(calculatedIndex)" />
+                    <img [src]="item" class="rounded col-md-12" height="300" />
+            </label>
+        </div>
+        }
+    </div>
+</div>

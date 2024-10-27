@@ -1,0 +1,38 @@
+<div class="container-fluid admin-layout">
+    <div id="sticky-wrapper" class="sticky-wrapper" style="height: 78px;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" routerLink="/admin">
+                    <span>{{'Application.Name' | translate}}</span>
+                </a>
+                <div id="navbarNav">
+                    <div class="dropdown float-end" *ngIf="isLogIn">
+                        <button class="dropdown-item" (click)="logout()">
+                            {{ 'Admin.Logout' | translate}} <i class="fa fa-right-from-bracket"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row mt-5">
+            <div class="col-md-1 border-right border-dark" id="sidebarMenu" >
+                <nav class="">
+                    <div class="position-sticky">
+                        <div class="list-group list-group-flush mx-3 mt-4">
+                            <a href="/admin/quizzes" class="list-group-item list-group-item-action rounded ripple active">
+                                <i class="fas fa-chart-area fa-fw me-3"></i><span>{{ 'Admin.Quiz_Menu' | translate }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                </div>
+            <div class="container col-md-11">
+                <router-outlet />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main-loader" class="">
+    <div class="bars-1"></div>
+</div>

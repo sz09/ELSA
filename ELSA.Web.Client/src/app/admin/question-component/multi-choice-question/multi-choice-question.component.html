@@ -1,0 +1,22 @@
+<div class="row image-multi-choice-question-container">
+    <label *ngIf="errorMessage" class="error-message"><i>{{errorMessage}}</i></label>
+    @for (batch of batchOptions; track $index) {
+        @let iBatch = $index;
+        <div class="row">
+            @for (item of batch; track $index) {
+                @let calculatedIndex = calculateIndex(iBatch, $index);
+                <div class="d-inline-block col-md-6 p-2">
+                    <input class="form-check-input col-md-1" type="checkbox" [name]="question.id"
+                        id="{{question.id}}-{{calculatedIndex}}" checked [value]="calculatedIndex" [ngModel]="tempModels[calculatedIndex]"
+                        (ngModelChange)="select(calculatedIndex)" 
+                        [disabled]="!tempOptionModels[calculatedIndex]"/>
+                    <input class="form-control col-md-12" [(ngModel)]="tempOptionModels[calculatedIndex]"/>
+                </div>
+                }
+        </div>
+    }
+    
+    <div class="buttons">
+        <button type="button" class="btn btn-sm btn-outline-dark" (click)="onAddNewOption()">{{'Admin.Question.AddNewOption_Button' | translate}}</button>
+    </div>
+</div>
