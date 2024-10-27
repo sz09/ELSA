@@ -1,0 +1,8 @@
+*.dll
+*.pdb
+*.vsidx
+**/.vs/
+**/bin/Debug/
+**/bin/Release/
+*/obj/*
+**/obj/**

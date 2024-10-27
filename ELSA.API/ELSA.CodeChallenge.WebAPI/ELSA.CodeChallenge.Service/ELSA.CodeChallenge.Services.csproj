@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.22.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="8.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IdentityServer\ELSA.CodeChallenge.IdentityServer.csproj" />
+    <ProjectReference Include="..\..\ELSA.Utilities\ELSA.CodeChallenge.Utilities.csproj" />
+    <ProjectReference Include="..\ELSA.CodeChallenge.Repositories\ELSA.CodeChallenge.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

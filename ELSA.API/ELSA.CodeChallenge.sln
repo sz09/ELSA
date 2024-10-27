@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.IdentityServer", "IdentityServer\ELSA.CodeChallenge.IdentityServer.csproj", "{FC527326-6795-4ED5-B716-9BDF6363C3D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.Utilities", "ELSA.Utilities\ELSA.CodeChallenge.Utilities.csproj", "{73E65E0E-6CDA-48B4-8D84-9DFD876BFDCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.Config", "ELSA.CodeChallenge.Config\ELSA.CodeChallenge.Config.csproj", "{ABA95C51-6500-44F0-849A-E2FFA7AB1C3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.IdentityServerAPI", "ELSA.CodeChallenge.IdentityServer\ELSA.CodeChallenge.IdentityServer\ELSA.CodeChallenge.IdentityServerAPI.csproj", "{D324713A-3C0A-44B3-B9E8-72EDBBA6F620}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.Repositories", "ELSA.CodeChallenge.WebAPI\ELSA.CodeChallenge.Repositories\ELSA.CodeChallenge.Repositories.csproj", "{2DCA81D5-4F42-400C-94FD-A1B0DEA105CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.Services", "ELSA.CodeChallenge.WebAPI\ELSA.CodeChallenge.Service\ELSA.CodeChallenge.Services.csproj", "{825730F9-BDC8-450C-8B38-050FCAD0DF8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELSA.CodeChallenge.WebAPI", "ELSA.CodeChallenge.WebAPI\ELSA.CodeChallenge.WebAPI\ELSA.CodeChallenge.WebAPI.csproj", "{10FC5230-FFF7-4EE8-B443-31703F463062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELSA.CodeChallenge.NotificationAPI", "ELSA.CodeChallenge.Notification\ELSA.CodeChallenge.NotificationAPI.csproj", "{D25242E0-23EE-46C9-8BF4-D511C7775016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELSA.CodeChallenge.DAL", "ELSA.CodeChallenge.DAL\ELSA.CodeChallenge.DAL.csproj", "{2EBAD3C3-E577-4D06-A9FF-D678BE8473CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC527326-6795-4ED5-B716-9BDF6363C3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC527326-6795-4ED5-B716-9BDF6363C3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC527326-6795-4ED5-B716-9BDF6363C3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC527326-6795-4ED5-B716-9BDF6363C3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E65E0E-6CDA-48B4-8D84-9DFD876BFDCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E65E0E-6CDA-48B4-8D84-9DFD876BFDCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E65E0E-6CDA-48B4-8D84-9DFD876BFDCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E65E0E-6CDA-48B4-8D84-9DFD876BFDCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA95C51-6500-44F0-849A-E2FFA7AB1C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA95C51-6500-44F0-849A-E2FFA7AB1C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA95C51-6500-44F0-849A-E2FFA7AB1C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA95C51-6500-44F0-849A-E2FFA7AB1C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D324713A-3C0A-44B3-B9E8-72EDBBA6F620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D324713A-3C0A-44B3-B9E8-72EDBBA6F620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D324713A-3C0A-44B3-B9E8-72EDBBA6F620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D324713A-3C0A-44B3-B9E8-72EDBBA6F620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DCA81D5-4F42-400C-94FD-A1B0DEA105CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DCA81D5-4F42-400C-94FD-A1B0DEA105CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DCA81D5-4F42-400C-94FD-A1B0DEA105CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DCA81D5-4F42-400C-94FD-A1B0DEA105CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{825730F9-BDC8-450C-8B38-050FCAD0DF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825730F9-BDC8-450C-8B38-050FCAD0DF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825730F9-BDC8-450C-8B38-050FCAD0DF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825730F9-BDC8-450C-8B38-050FCAD0DF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10FC5230-FFF7-4EE8-B443-31703F463062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FC5230-FFF7-4EE8-B443-31703F463062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FC5230-FFF7-4EE8-B443-31703F463062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FC5230-FFF7-4EE8-B443-31703F463062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25242E0-23EE-46C9-8BF4-D511C7775016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25242E0-23EE-46C9-8BF4-D511C7775016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25242E0-23EE-46C9-8BF4-D511C7775016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25242E0-23EE-46C9-8BF4-D511C7775016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EBAD3C3-E577-4D06-A9FF-D678BE8473CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBAD3C3-E577-4D06-A9FF-D678BE8473CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBAD3C3-E577-4D06-A9FF-D678BE8473CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBAD3C3-E577-4D06-A9FF-D678BE8473CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0E69C3C-02B4-4729-B017-1635EFC5E2DD}
+	EndGlobalSection
+EndGlobal
