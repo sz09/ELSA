@@ -84,7 +84,6 @@ Architecture diagram system
 Features:
 - Separate modules to get as small as possible module when load SPA application by module
 - Localization: but for now has only English, if wanna new language, only provide a new json file
-- 
 - Public page:
   - Login if not login yet
     - Provide user name and email
