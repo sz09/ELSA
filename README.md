@@ -31,8 +31,7 @@ Architecture diagram system
         - Almost is interact with data
         - Handling dynamic question problem due to I provide 6 types of question
       - QuizService
-        - Almost is interact with data
-      - ScoreService
+        - Almost is only interact with data
       - ScoreService:
         - Save score by user
         - If any change of score data, it will trigger notification service to notify connected users 
