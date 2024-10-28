@@ -21,7 +21,7 @@ namespace ELSA.Services
             try
             {
                 var filter = Builders<ScoreModel>.Filter.Eq(d => d.UserId, loggedInUserService.UserId);
-                var update = Builders<ScoreModel>.Update.AddToSet(d => d.ScoreByQuesitons, new ScoreByQuiz { QuestionId = questionId, Points = points })
+                var update = Builders<ScoreModel>.Update.AddToSet(d => d.ScoreByQuesitons, new ScoreByQuestion { QuestionId = questionId, Points = points })
                                                         .SetOnInsert(d => d.Username, loggedInUserService.Username);
                 var result = await scoreRepository.UpdateAsync(session, filter, update, new UpdateOptions { IsUpsert = true });
                 if (result.ModifiedCount > 0 || result.UpsertedId != null)

@@ -9,11 +9,11 @@ namespace ELSA.Repositories.Models
         public ObjectId UserId { get; set; }
         public string Username { get; set; }
         public double TotalPoints { get; set; }
-        public ScoreByQuiz[] ScoreByQuesitons { get; set; } = [];
+        public ScoreByQuestion[] ScoreByQuesitons { get; set; } = [];
     }
 
     [BsonIgnoreExtraElements]
-    public class ScoreByQuiz
+    public class ScoreByQuestion
     {
         public ObjectId QuestionId { get; set; }
         public double Points { get; set; }
